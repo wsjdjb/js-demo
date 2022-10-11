@@ -1,0 +1,46 @@
+@charset "utf-8";
+html,body,ul,ol,dl,li,dt,dd,p,form,input,h1,h2,h3,h4,h5,h6{
+	margin:0;
+	padding:0;
+}
+html,body{
+	font-size:16px;
+}
+b,strong,i,em,h1,h2,h3,h4,h5,h6{
+	font-weight:500;
+	font-style:normal;
+}
+a{
+	text-decoration: none;
+}
+ul,ol,li{
+	list-style:none;
+}
+.clearfn:after{
+	content:"";
+	clear:both;
+	display: block;
+	overflow:hidden;
+	height:0;
+	visibility: hidden;
+}
+.hr-solid-content {
+	color: #a2a9b6;
+	border: 0;
+	font-size: 20px;
+	padding: 1em 0;
+	position: relative;
+}     
+.hr-solid-content::before {
+	content: attr(data-content);
+	position: absolute;
+	padding: 0 1ch;
+	line-height: 1px;
+	border: solid #d0d0d5;
+	border-width: 0 99vw;
+	width: fit-content;
+	/* for 不支持fit-content浏览器 */
+	white-space: nowrap;
+	left: 50%;
+	transform: translateX(-50%);
+} 
